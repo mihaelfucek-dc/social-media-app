@@ -1,3 +1,8 @@
+:root {
+    --greyText: rgb(101, 119, 134);
+    --greydark: rgba(101, 119, 134, 0.45);
+}
+
 body {
     background-color: #0099ff;
 }
@@ -41,4 +46,24 @@ input[type="submit"] {
     border: none;
     border-radius: 2px;
     margin-bottom: 10px;
+}
+
+.editLabel {
+    text-align: left; 
+    color: var(--greyText)
+}
+
+.usernameDisabled {
+    background-color: var(--greydark) !important;
+}
+
+#passErrorMessageDisabled {
+    color: red;
+    text-align: left;
+    opacity: 0;
+    margin: -20px 0 20px 0;
+}
+
+.passErrorMessageEnabled {
+    opacity: 1 !important;
 }

@@ -1,0 +1,29 @@
+extends layouts/login-layout.pug
+
+block content
+    .loginContainer
+        h1 Edit Profile
+        form#editProfileForm(method="post" onsubmit="event.preventDefault(); validateForm();")
+
+            p.errorMessage #{errorMessage}
+            .editLabel username
+            input.usernameDisabled(type="text" name="username" disabled="disabled" value=username)
+            .editLabel first name
+            input(type="text" name="firstName" placeholder="First name", value=firstName)
+            .editLabel last name
+            input(type="text" name="lastName" placeholder="Last name", value=lastName)
+            .editLabel email
+            input(type="text" name="email" placeholder="Email", value=email)
+            .editLabel password
+            input#password(type="password" name="password" placeholder="Password" value="")
+            #passErrorMessageDisabled Password not strong enough
+            input(type="submit" value="Save")
+
+    script.
+        var form = document.getElementById("editProfileForm");
+        function validateForm() {
+            form.submit();
+        }
+
+block scripts
+    script(src="/js/editProfile.js")

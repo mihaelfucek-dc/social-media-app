@@ -32,6 +32,7 @@ const uploadRoute = require('./routes/uploadRoutes');
 const searchRoute = require('./routes/searchRoutes');
 const messagesRoute = require('./routes/messagesRoutes');
 const notificationsRoute = require('./routes/notificationRoutes');
+const editProfileRoute = require('./routes/editProfile');
 
 // Api routes
 const postsApiRoute = require('./routes/api/posts');
@@ -49,6 +50,7 @@ app.use("/uploads", uploadRoute);
 app.use("/search", middleware.requireLogin, searchRoute);
 app.use("/messages", middleware.requireLogin, messagesRoute);
 app.use("/notifications", middleware.requireLogin, notificationsRoute);
+app.use("/editProfile", middleware.requireLogin, editProfileRoute);
 
 app.use("/api/posts", postsApiRoute);
 app.use("/api/users", usersApiRoute);

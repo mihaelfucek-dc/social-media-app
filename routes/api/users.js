@@ -131,4 +131,15 @@ router.post("/coverPhoto", upload.single("croppedImage"), async (req, res, next)
 
 });
 
+router.get("/:username", async (req, res, next) => {
+    User.findOne( { username: req.params.username } )
+    .then(results => {
+        res.status(200).send(results);
+    })
+    .catch(error => {
+        console.log(error);
+        res.sendStatus(400);
+    })
+});
+
 module.exports = router;

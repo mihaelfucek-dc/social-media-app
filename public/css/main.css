@@ -828,3 +828,15 @@ button span {
 #notificationList .active {
     background-color: white;
 }
+
+.editProfile {
+    border: 1px solid var(--blue);
+    color: var(--blue);
+    font-weight: bold;
+    padding: 5px 15px;
+    border-radius: 60px;
+    display: inline-block;
+    margin-left: var(--spacing);
+    cursor: pointer;
+}
+

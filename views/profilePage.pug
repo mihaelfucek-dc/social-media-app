@@ -38,6 +38,8 @@ block content
                         +createFollowButton(profileUser, true)
                     - else
                         +createFollowButton(profileUser, false)
+                else
+                    a.editProfile(href=`/editProfile`) Edit
 
             .userDetailsContainer
                 span.displayName #{profileUser.firstName} #{profileUser.lastName}
